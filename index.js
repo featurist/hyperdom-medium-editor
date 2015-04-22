@@ -13,9 +13,7 @@ module.exports = function (options) {
         this.html = binding.get();
         element.innerHTML = normaliseHtml(this.html);
 
-        this.editor = new Medium(element, {
-          buttons: ['bold', 'italic', 'header1', 'header2', 'unorderedlist', 'orderedlist']
-        });
+        this.editor = new Medium(element, options.mediumOptions || {});
 
         element.addEventListener('input', function (ev) {
           self.html = ev.target.innerHTML;
