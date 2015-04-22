@@ -13,5 +13,14 @@
   ],
   "dependencies": {
     "medium-editor": "4.5.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featurist/plastiq-medium-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/featurist/plastiq-medium-editor/issues"
+  },
+  "homepage": "https://github.com/featurist/plastiq-medium-editor"
 }
