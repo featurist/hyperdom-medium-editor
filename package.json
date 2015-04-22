@@ -1,6 +1,6 @@
 {
   "name": "plastiq-medium-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "medium-editor for plastiq",
   "main": "index.js",
   "scripts": {
