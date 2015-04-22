@@ -10,18 +10,21 @@ module.exports = function (options) {
       onadd: function (element) {
         var self = this;
 
-        this.html = binding.get();
+        this.binding = binding;
+
+        this.html = this.binding.get();
         element.innerHTML = normaliseHtml(this.html);
 
         this.editor = new Medium(element, options.mediumOptions || {});
 
         element.addEventListener('input', function (ev) {
           self.html = ev.target.innerHTML;
-          binding.set(self.html);
+          self.binding.set(self.html);
         });
       },
       onupdate: function (element) {
-        var html = binding.get();
+        this.binding = binding;
+        var html = this.binding.get();
 
         if (this.html != html) {
           this.html = html;
