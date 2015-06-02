@@ -7,10 +7,10 @@ module.exports = function (options) {
 
   return h.component(
     {
+      binding: binding,
+
       onadd: function (element) {
         var self = this;
-
-        this.binding = binding;
 
         this.html = this.binding.get();
         element.innerHTML = normaliseHtml(this.html);
@@ -22,8 +22,8 @@ module.exports = function (options) {
           self.binding.set(self.html);
         });
       },
+
       onupdate: function (element) {
-        this.binding = binding;
         var html = this.binding.get();
 
         if (this.html != html) {
@@ -31,10 +31,12 @@ module.exports = function (options) {
           element.innerHTML = normaliseHtml(html);
         }
       },
+
       onremove: function () {
         this.editor.destroy();
       }
     },
+
     h('div', {class: options.class})
   );
 };
