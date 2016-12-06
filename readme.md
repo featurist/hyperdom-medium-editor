@@ -1,11 +1,11 @@
-# Medium Editor for Plastiq
+# Medium Editor for hyperdom
 
-    npm install plastiq-medium-editor
+    npm install hyperdom-medium-editor
 
 ## Usage
 
 ```js
-var mediumEditor = require('plastiq-medium-editor');
+var mediumEditor = require('hyperdom-medium-editor');
 
 function render(model) {
   return mediumEditor({

@@ -1,9 +1,9 @@
-var plastiq = require('plastiq');
-var h = require('plastiq').html;
+var hyperdom = require('hyperdom');
+var h = require('hyperdom').html;
 var Medium = require('medium-editor');
 
 module.exports = function (options) {
-  var binding = plastiq.binding(options.binding);
+  var binding = hyperdom.binding(options.binding);
 
   return h.component(
     {
